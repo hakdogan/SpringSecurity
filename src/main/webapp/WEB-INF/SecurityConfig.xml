@@ -38,7 +38,7 @@
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/springsecurity" />
         <property name="username" value="root" />
-        <property name="password" value="kodcu1234!" />
+        <property name="password" value="root" />
     </bean>
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">  
