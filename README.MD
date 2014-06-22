@@ -1,9 +1,10 @@
 # Spring Security
----
+--
 
 The subject of this tutorial, Spring Framework's security module.
 
 <br>
+
 **Exemplified topics: **
 
 * Authentication
@@ -12,8 +13,10 @@ The subject of this tutorial, Spring Framework's security module.
 * RememberMe functionality
 
 <br>
+
 **SQL Schema**
 --
+
 <pre>
 
 CREATE DATABASE `springsecurity` 
@@ -50,4 +53,5 @@ CREATE TABLE `users` (
 <br>
 **A screenshot of the application**
 --
+
 <img src="http://i62.tinypic.com/r060bn.png"/>
