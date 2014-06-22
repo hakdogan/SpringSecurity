@@ -4,7 +4,7 @@
 The subject of this tutorial, Spring Framework's security module.
 
 <br>
-**Exemplified topics: **
+**Exemplified topics**
 
 * Authentication
 * Authorization
