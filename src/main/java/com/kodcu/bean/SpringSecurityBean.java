@@ -4,10 +4,14 @@
  */
 package com.kodcu.bean;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.application.NavigationHandler;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.ExternalContext;
@@ -24,7 +28,7 @@ import javax.servlet.ServletResponse;
 
 @ManagedBean
 @RequestScoped
-public class LoginBean implements Serializable {
+public class SpringSecurityBean implements Serializable {
     
     public String doLogin()  {
         
@@ -37,11 +41,23 @@ public class LoginBean implements Serializable {
             FacesContext.getCurrentInstance().responseComplete();
             
         } catch (ServletException | IOException ex) {
-            Logger.getLogger(LoginBean.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SpringSecurityBean.class.getName()).log(Level.SEVERE, null, ex);
         
         } finally {
             return null;
         }
-    } 
+    }
+
+    public void authorizedUserControl(){
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if(!authentication.getPrincipal().toString().equals("anonymousUser")){
+
+            NavigationHandler nh =  FacesContext.getCurrentInstance().getApplication().getNavigationHandler();
+            nh.handleNavigation(FacesContext.getCurrentInstance(), null, "/member/index.xhtml?faces-redirect=true");
+
+        }
+    }
 }
 

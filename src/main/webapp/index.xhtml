@@ -5,9 +5,13 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Spring Security</title>
+        <f:metadata>
+            <f:event type="javax.faces.event.PreRenderViewEvent" listener="#{springSecurityBean.authorizedUserControl}"/>
+        </f:metadata>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
         <h:outputStylesheet library="css" name="style.css"/>
@@ -66,7 +70,7 @@ and open the template in the editor.
                                 </h:panelGroup>
 
                                 <h:outputLabel />
-                                <h:commandButton styleClass="btn btn-primary" action="#{loginBean.doLogin}" value="Login"/>
+                                <h:commandButton styleClass="btn btn-primary" action="#{springSecurityBean.doLogin}" value="Login"/>
 
                                 <h:outputLabel/>
                                 <h:outputLabel value="#{sessionScope['SPRING_SECURITY_LAST_EXCEPTION'].message}" rendered="#{!empty sessionScope['SPRING_SECURITY_LAST_EXCEPTION'].message}"/>

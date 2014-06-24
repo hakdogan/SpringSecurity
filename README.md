@@ -1,7 +1,7 @@
 # Spring Security
----
+--
 
-The subject of this tutorial, Spring Framework's security module.
+This application illustrates and demonstrates use of the Spring Framework's security module with MySQL Database and Java web application(JSF2.2)
 
 <br>
 **Exemplified topics**

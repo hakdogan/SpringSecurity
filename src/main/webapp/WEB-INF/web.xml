@@ -52,7 +52,7 @@
 
     <error-page>
         <error-code>403</error-code>
-        <location>/WEB-INF/403.xhtml</location>
+        <location>/WEB-INF/error/403.xhtml</location>
     </error-page>
     
     <welcome-file-list>
