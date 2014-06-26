@@ -13,10 +13,10 @@
     <security:http auto-config="true" use-expressions="true">
         
         <security:intercept-url pattern="/index.xhtml" access="permitAll" />
-        <security:intercept-url pattern="/admin/index.xhtml" access="hasAnyRole('ROLE_ADMIN')" />
-        <security:intercept-url pattern="/member/index.xhtml" access="hasAnyRole('ROLE_ADMIN', 'ROLE_GUEST')" />
+        <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+        <security:intercept-url pattern="/member/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_GUEST')" />
     
-        <security:form-login login-processing-url="/j_spring_security_check" login-page="/index.xhtml" 
+        <security:form-login login-processing-url="/j_spring_security_check" login-page="/index.xhtml"
                              default-target-url="/member/index.xhtml" authentication-failure-url="/index.xhtml"/>
         <security:logout invalidate-session="true" logout-success-url="/index.xhtml" />
         <security:remember-me data-source-ref="dataSource" />
