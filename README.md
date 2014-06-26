@@ -1,5 +1,4 @@
 # Spring Security
---
 
 This application illustrates and demonstrates use of the Spring Framework's security module with MySQL Database and Java web application(JSF2.2)
 

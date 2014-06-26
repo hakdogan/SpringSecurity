@@ -19,7 +19,7 @@
         <security:form-login login-processing-url="/j_spring_security_check" login-page="/index.xhtml"
                              default-target-url="/member/index.xhtml" authentication-failure-url="/index.xhtml"/>
         <security:logout invalidate-session="true" logout-success-url="/index.xhtml" />
-        <security:remember-me data-source-ref="dataSource" />
+        <security:remember-me data-source-ref="dataSource" token-validity-seconds="86400" />
 
     </security:http>
 
