@@ -1,19 +1,17 @@
 # Spring Security
 
-This application illustrates and demonstrates use of the Spring Framework's security module with MySQL Database and Java web application(JSF2.2)
+This application illustrates and demonstrates use of the Spring Framework's security module with ``MySQL Database`` and Java web application(JSF2.2)
 
-<br>
-**Exemplified topics**
+## Exemplified topics
 
 * Authentication
 * Authorization
 * Intercept-url
 * RememberMe functionality
 
-<br>
-**SQL Schema**
---
-<pre>
+
+## SQL Schema
+```
 
 CREATE DATABASE `springsecurity`;
 
@@ -45,9 +43,8 @@ CREATE TABLE `persistent_logins` (
   PRIMARY KEY (`series`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
-</pre>
+```
 
-<br>
-**A screenshot of the application**
---
-<img src="http://i58.tinypic.com/34z0fmv.png"/>
+## A screenshot of the application
+
+![screenshot](http://i58.tinypic.com/34z0fmv.png)
